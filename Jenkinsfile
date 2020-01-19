@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh '''
-                    cd src
+                    pwd
                     gcc src/prog.c
                     src/a.out	
                 '''
