@@ -3,9 +3,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'echo "Hello World"'
                 sh '''
-                    ls -lah
+                    cd src
+                    gcc prog.c
+                    ./a.out	
                 '''
             }
         }

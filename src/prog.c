@@ -1,8 +1,12 @@
 #include <stdio.h>
+#include <unistd.h>
 
 int main()
 {
-	printf("Hello!\n");
-
+	while(1)
+	{
+		sleep(1);
+		printf("Round again!\n");
+	}
 	return 1;
 }
