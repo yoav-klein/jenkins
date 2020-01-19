@@ -1,5 +1,5 @@
 pipeline {
-    agent { docker { image 'yoavklein3/myimage2' } } 
+    agent any
     stages {
         stage('Build') {
             steps {
