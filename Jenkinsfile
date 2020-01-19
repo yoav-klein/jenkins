@@ -5,8 +5,8 @@ pipeline {
             steps {
                 sh '''
                     cd src
-                    gcc prog.c
-                    ./a.out	
+                    gcc src/prog.c
+                    src/a.out	
                 '''
             }
         }
