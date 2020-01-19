@@ -9,6 +9,8 @@ pipeline {
                     ls -lah
                     cd src
                     ls -lah
+                    gcc prog.c
+                    ./a.out
                     
                 '''
             }
