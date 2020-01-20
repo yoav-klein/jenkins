@@ -1,5 +1,5 @@
 pipeline {
-    agent { docker { image 'ubuntu:latest' }  } 
+    agent { label 'amitay'  } 
     stages {
         stage('Build') {
             steps {
