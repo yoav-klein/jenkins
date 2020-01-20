@@ -4,5 +4,5 @@
 int main()
 {
 	printf("This is my pipeline");
-	return 1;
+	return 0;
 }
