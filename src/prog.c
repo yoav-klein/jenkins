@@ -3,10 +3,6 @@
 
 int main()
 {
-	while(1)
-	{
-		sleep(1);
-		printf("Round again!\n");
-	}
+	printf("This is my pipeline");
 	return 1;
 }
