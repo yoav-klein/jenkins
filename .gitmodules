@@ -1,0 +1,6 @@
+[submodule "lab"]
+	path = lab
+	url = https://github.com/yoav-klein/lab
+[submodule "src/MyRepo"]
+	path = src/MyRepo
+	url = https://github.com/yoav-klein/MyRepo
