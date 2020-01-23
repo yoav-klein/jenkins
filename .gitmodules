@@ -4,3 +4,6 @@
 [submodule "src/MyRepo"]
 	path = src/MyRepo
 	url = https://github.com/yoav-klein/MyRepo
+[submodule "angular-phonecat"]
+	path = angular-phonecat
+	url = https://github.com/angular/angular-phonecat.git
