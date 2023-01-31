@@ -1,8 +1,9 @@
-version: "10.9"
+version: "3.9"
 services:
   dind:
 
 volumes:
-
+  jenkins-docker-certs:
+  jenkins-data:
 
 
