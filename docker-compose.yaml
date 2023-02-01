@@ -1,7 +1,36 @@
 version: "3.9"
 services:
   dind:
-
+    image: docker:dind
+    privileged: true
+    hostname: docker
+    environment:
+      DOCKER_TLS_CERTDIR: /certs
+    volumes:
+      - type: volume
+        source: jenkins-docker-certs
+        target: /certs/client
+      - type: volume
+        source: jenkins-data
+        target: /var/jenkins_home
+    ports:
+      - "2376:2376" 
+  jenkins:
+    image: jenkins:2.375.2
+    environment:
+      DOCKER_HOST: docker
+      DOCKER_TLS_VERIFY: 1
+      DOCKER_CERT_PATH: /certs/client
+    volumes:
+      - type: volume
+        source: jenkins-docker-certs
+        target: /certs/client
+      - type: volume
+        source: jenkins-data
+        target: /var/jenkins_home
+    ports:
+      - "8080:8080"
+      - "50000:50000" # optional - for inbound agents
 volumes:
   jenkins-docker-certs:
   jenkins-data:
