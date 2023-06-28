@@ -16,7 +16,7 @@ services:
     ports:
       - "2376:2376" 
   jenkins:
-    image: jenkins:2.375.2
+    build: ./jenkins-dockerfile
     environment:
       DOCKER_HOST: docker
       DOCKER_TLS_VERIFY: 1
